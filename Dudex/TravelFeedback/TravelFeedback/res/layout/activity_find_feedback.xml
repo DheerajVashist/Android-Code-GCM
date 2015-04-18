@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323232"
+    android:orientation="vertical" >
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Travel"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#323232" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Feedback"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFad33" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFad33"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/tv_back_on_find"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/abs__ic_ab_back_holo_light" />
+
+        <TextView
+            android:id="@+id/tv_vehicle_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Vehicle Type"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#323232" />
+
+        <TextView
+            android:id="@+id/tv_to_submit_feedback"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dp"
+            android:layout_weight="5"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:text="Submit"
+            android:textColor="#323232" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_for_find_fd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_plane_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:weightSum="10" >
+
+            <EditText
+                android:id="@+id/et_plan_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="center"
+                android:hint="AAAA"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/et_bg"
+                android:inputType="textCapCharacters"
+                android:maxLength="4" />
+
+            <EditText
+                android:id="@+id/et_plane_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="0000"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/et_bg"
+                android:nextFocusForward="@+id/et_vehicle_code"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_train_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/et_train_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="00000"
+                android:background="@drawable/et_bg"
+                android:inputType="number"
+                android:maxLength="5"
+                android:nextFocusForward="@+id/et_vehicle_code"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_vehicle_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="12" >
+
+            <EditText
+                android:id="@+id/et_vehicle_st"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/et_bg"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="center"
+                android:hint="DL"
+                android:inputType="textCapCharacters"
+                android:maxLength="2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" />
+
+            <EditText
+                android:id="@+id/et_vehicle_st_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/et_bg"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="00"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" />
+
+            <EditText
+                android:id="@+id/et_vehicle_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/et_bg"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:gravity="center"
+                android:hint="AA"
+                android:inputType="textCapCharacters"
+                android:maxLength="2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" />
+
+            <EditText
+                android:id="@+id/et_vehicle_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/et_bg"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="0000"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_find_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_dialog"
+            android:gravity="center"
+            android:onClick="submitVehicleNumber"
+            android:padding="5dp"
+            android:text="Find Feedback"
+         	android:textColor="#323232"
+            />
+    </LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_more" 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="horizontal"
+	    android:gravity="center"
+	    android:visibility="gone"
+	    >
+	    <Button 
+	        android:id="@+id/btn_slip_down"
+	        android:background="#00000000"
+	        android:drawableTop="@android:drawable/ic_menu_more"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:gravity="center"
+	        android:onClick="submitVehicleNumber"
+	        />
+	</LinearLayout>
+    <com.costum.android.widget.LoadMoreListView
+        android:id="@+id/lst_of_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.costum.android.widget.LoadMoreListView>
+
+</LinearLayout>
